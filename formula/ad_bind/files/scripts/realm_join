@@ -1,0 +1,6 @@
+#!/usr/bin/expect
+
+spawn realm join --user=Administrator dc1.siguerts.com
+expect "Password for Administrator:"
+send -- "Moneyiseasytomake1\r"
+expect eof
