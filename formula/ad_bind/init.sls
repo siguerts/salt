@@ -54,14 +54,14 @@ ad_bind_packages_debian:
     - managed
     - source: salt://ad_bind/files/etc/krb5.conf
 
-Join domain:
-  cmd:
-    - script
-    - name: join AD realm script
-    - source: salt://ad_bind/files/scripts/realm_join.sh
-
 sssd:
   service:
     - running
     - enable: True
     - reload: True
+
+Join domain:
+  cmd:
+    - script
+    - name: join AD realm script
+    - source: salt://ad_bind/files/scripts/realm_join.sh
