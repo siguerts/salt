@@ -1,3 +1,0 @@
-mfellag:
-  user:
-    - absent
